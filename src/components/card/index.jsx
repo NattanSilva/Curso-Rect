@@ -1,10 +1,10 @@
 import "./style.css";
 
-export function Card() {
+export function Card(props) {
   return(
     <div className="card">
-      <strong>Nattan Silva</strong>
-      <small>02:15:24</small>
+      <strong>{props.name}</strong>
+      <small>{props.time}</small>
     </div>
   )
 }
