@@ -1,12 +1,21 @@
+import React, { useState } from "react";
 import { Card } from "../../components/card";
 import "./style.css";
 
 function Home() {
+  const [studentName, setStudentName] = useState("");
+
   return (
     // fragment //
     <div className="container"> 
-      <h1>Lista de presença</h1>
-      <input type="text" name="nome" id="nome__input" placeholder="Digite seu nome..."/>
+      <h1>Nome: {studentName}</h1>
+      <input 
+        type="text" 
+        name="nome" 
+        id="nome__input" 
+        placeholder="Digite seu nome..."
+        onChange={e => setStudentName(e.target.value)}
+      />
       <button type="button">Adicionar</button>
 
       <Card name="Nattan" time="12:56:24"/>
